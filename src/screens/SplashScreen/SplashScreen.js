@@ -23,21 +23,21 @@ const SplashScreen = () => {
   };
 
   return (
-    <div className="splash-screen">
+    <div className="splash-screen" data-testid="splash-screen">
       <Header />
       
-      <div className="splash-content">
-        <div className="uber-logo">
+      <div className="splash-content" data-testid="splash-content">
+        <div className="uber-logo" data-testid="uber-logo">
           <h1 className="uber-text">Uber</h1>
-          <div className="down-arrow">
+          <div className="down-arrow" data-testid="down-arrow">
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M8 12L16 20L24 12" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </div>
-          <p className="where-to-text">Where to?</p>
+          <p className="where-to-text" data-testid="where-to-text">Where to?</p>
         </div>
         
-        <div className="car-illustration">
+        <div className="car-illustration" data-testid="car-illustration">
           <img 
             src="/assets/banner-girl.png" 
             alt="Car with Driver Illustration" 
@@ -46,8 +46,8 @@ const SplashScreen = () => {
         </div>
       </div>
       
-      <div className="splash-footer">
-        <div className="action-item" onClick={handleNewRide}>
+      <div className="splash-footer" data-testid="splash-footer">
+        <div className="action-item" data-testid="new-ride-button" onClick={handleNewRide}>
           <div className="action-icon action-icon--blue">+</div>
           <div className="action-text">
             <div className="action-title">Book a new ride</div>
@@ -56,7 +56,7 @@ const SplashScreen = () => {
           <div className="action-arrow">›</div>
         </div>
         
-        <div className="action-item" onClick={handleChangeOfPlans}>
+        <div className="action-item" data-testid="change-of-plans-button" onClick={handleChangeOfPlans}>
           <div className="action-icon action-icon--red">×</div>
           <div className="action-text">
             <div className="action-title">Change of plans?</div>

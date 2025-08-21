@@ -44,13 +44,13 @@ const SearchScreen = () => {
   const isNextEnabled = destination.trim().length > 0;
 
   return (
-    <div className="search-screen">
+    <div className="search-screen" data-testid="search-screen">
       <Header showStartAgain={true} onStartAgain={handleStartAgain} />
       
-      <div className="search-content">
-        <h1 className="search-title">Ride with Uber</h1>
+      <div className="search-content" data-testid="search-content">
+        <h1 className="search-title" data-testid="search-title">Ride with Uber</h1>
         
-        <div className="search-form">
+        <div className="search-form" data-testid="search-form">
           <LocationInput
             pickupValue={pickupLocation}
             destinationValue={destination}
@@ -61,13 +61,14 @@ const SearchScreen = () => {
           />
         </div>
         
-        <div className="popular-destinations">
-          <h3 className="destinations-title">Or, select from popular destinations</h3>
-          <div className="destinations-list">
+        <div className="popular-destinations" data-testid="popular-destinations">
+          <h3 className="destinations-title" data-testid="destinations-title">Or, select from popular destinations</h3>
+          <div className="destinations-list" data-testid="destinations-list">
             {popularDestinations.map((dest, index) => (
               <div 
                 key={index} 
                 className="destination-item"
+                data-testid={`destination-item-${index}`}
                 onClick={() => handleDestinationSelect(dest.name)}
               >
                 <div className="destination-icon">
@@ -87,7 +88,7 @@ const SearchScreen = () => {
         </div>
       </div>
       
-      <div className="search-footer">
+      <div className="search-footer" data-testid="search-footer">
         <div className="uber-logo-footer">
           <img 
             src="/assets/uber-logo.svg" 
@@ -95,14 +96,15 @@ const SearchScreen = () => {
             className="uber-logo-footer-img"
           />
         </div>
-        <div className="footer-buttons">
-          <Button variant="secondary" onClick={handleBack}>
+        <div className="footer-buttons" data-testid="footer-buttons">
+          <Button variant="secondary" onClick={handleBack} data-testid="back-button">
             ← Back
           </Button>
           <Button 
             variant="primary" 
             onClick={handleNext}
             disabled={!isNextEnabled}
+            data-testid="next-button"
           >
             Next →
           </Button>
