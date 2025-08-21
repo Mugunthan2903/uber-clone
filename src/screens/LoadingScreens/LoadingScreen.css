@@ -1,0 +1,55 @@
+.loading-screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: var(--font-primary);
+}
+
+.loading-screen--blue {
+  background: linear-gradient(180deg, #1fb3d4 0%, #276EF1 100%);
+}
+
+.loading-content {
+  text-align: center;
+  padding: 40px 32px;
+  max-width: 480px;
+  width: 100%;
+}
+
+.loading-text {
+  font-size: 32px;
+  font-weight: 400;
+  margin: 0 0 40px 0;
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+}
+
+.loading-subtitle {
+  font-size: 18px;
+  font-weight: 300;
+  margin: 0 0 40px 0;
+  line-height: 1.4;
+  opacity: 0.95;
+}
+
+.payment-amount {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 40px 0;
+  opacity: 0.9;
+}
+
+.loading-arrow {
+  font-size: 32px;
+  font-weight: 300;
+  margin-top: 60px;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.loading-arrow:hover {
+  opacity: 1;
+}

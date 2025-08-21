@@ -1,0 +1,142 @@
+.splash-screen {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #000000 0%, #000000 68%, #ffffff 68%, #ffffff 100%);
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-family: var(--font-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.splash-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 24px 60px 24px;
+  position: relative;
+  max-height: 68vh;
+}
+
+.uber-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+}
+
+.uber-text {
+  font-size: 120px;
+  font-weight: 400;
+  margin: 0;
+  color: white;
+  letter-spacing: -4px;
+  line-height: 0.9;
+}
+
+.down-arrow {
+  margin: 32px 0 24px 0;
+  text-align: center;
+}
+
+.down-arrow svg {
+  width: 40px;
+  height: 40px;
+}
+
+.where-to-text {
+  font-size: 40px;
+  font-weight: 300;
+  text-align: center;
+  margin: 0;
+  font-family: var(--font-primary);
+  color: white;
+}
+
+.car-illustration {
+  position: absolute;
+  bottom: -100px;
+  right: -20px;
+  z-index: 1;
+}
+
+.car-graphic-img {
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+}
+
+
+.splash-footer {
+  background: white;
+  padding: 32px 24px 24px 24px;
+  margin: 0;
+  z-index: 3;
+  position: relative;
+}
+
+.action-item {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.action-item:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.action-item:last-child {
+  margin-bottom: 0;
+}
+
+.action-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 16px;
+  color: white;
+}
+
+.action-icon--blue {
+  background-color: var(--color-blue-primary);
+}
+
+.action-icon--red {
+  background-color: var(--color-red);
+}
+
+.action-text {
+  flex: 1;
+  color: var(--color-gray-dark);
+}
+
+.action-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.action-subtitle {
+  font-size: 14px;
+  color: var(--color-gray-medium);
+}
+
+.action-arrow {
+  font-size: 20px;
+  color: #999;
+  margin-left: 16px;
+  font-weight: 300;
+}
