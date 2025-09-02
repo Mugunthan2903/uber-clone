@@ -1,10 +1,18 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  pickupLocation: 'Letiště Václava Havla Praha, T1',
-  destination: '',
-  searchResults: [],
-  isSearching: false,
+  pickup: {
+    address: '',
+    postcode: '',
+    latitude: '',
+    longitude: ''
+  },
+  destination: {
+    address: '',
+    postcode: '',
+    latitude: '',
+    longitude: ''
+  }
 };
 
 const locationSlice = createSlice({
@@ -12,29 +20,17 @@ const locationSlice = createSlice({
   initialState,
   reducers: {
     setPickupLocation: (state, action) => {
-      state.pickupLocation = action.payload;
+      state.pickup = action.payload;
     },
     setDestination: (state, action) => {
       state.destination = action.payload;
     },
-    setSearchResults: (state, action) => {
-      state.searchResults = action.payload;
-    },
-    setIsSearching: (state, action) => {
-      state.isSearching = action.payload;
-    },
-    resetLocationState: (state) => {
-      return initialState;
-    },
-  },
+    clearLocations: (state) => {
+      state.pickup = initialState.pickup;
+      state.destination = initialState.destination;
+    }
+  }
 });
 
-export const {
-  setPickupLocation,
-  setDestination,
-  setSearchResults,
-  setIsSearching,
-  resetLocationState,
-} = locationSlice.actions;
-
+export const { setPickupLocation, setDestination, clearLocations } = locationSlice.actions;
 export default locationSlice.reducer;

@@ -1,0 +1,32 @@
+/* PrintLoadingScreen Styles */
+.print-loading-screen {
+  background: var(--gradient-blue);
+  color: var(--primary-white);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.print-loading-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-lg);
+  max-width: 300px;
+  padding: var(--spacing-sm);
+}
+
+.print-message {
+  font-size: var(--font-size-screen-title);
+  font-weight: var(--font-weight-semi-bold);
+  margin: 0;
+}
+
+.print-subtitle {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-normal);
+  line-height: 1.4;
+  margin: 0;
+}

@@ -1,74 +1,75 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  serviceType: 'UberX',
-  bookingDetails: {
-    passengers: 1,
-    luggage: 1,
-    date: '',
-    time: '',
-    pickupLocation: '',
-    destination: ''
-  },
-  quote: {
-    basePrice: 450,
-    serviceFee: 25,
-    total: 475,
-    validUntil: null,
+  selectedVehicle: {
+    productId: '',
+    vehicleId: '',
+    name: '',
+    description: '',
+    seats: 0,
+    price: '',
+    currency: '',
+    fareId: ''
   },
   userDetails: {
+    firstName: '',
+    lastName: '',
     mobile: '',
-    email: '',
+    countryCode: '+44',
+    email: ''
   },
-  paymentStatus: 'pending',
-  bookingReference: '',
-  bookingStatus: 'draft',
+  pricing: {
+    baseFare: 0,
+    serviceFee: 0,
+    total: 0,
+    currency: 'GBP'
+  },
+  paymentStatus: 'pending', // 'pending' | 'processing' | 'completed'
+  bookingStatus: 'draft' // 'draft' | 'confirmed' | 'completed'
 };
 
 const bookingSlice = createSlice({
   name: 'booking',
   initialState,
   reducers: {
-    setServiceType: (state, action) => {
-      state.serviceType = action.payload;
+    selectVehicle: (state, action) => {
+      const vehicle = action.payload;
+      state.selectedVehicle = {
+        productId: vehicle.ProductId,
+        vehicleId: vehicle.VehicleId,
+        name: vehicle.VehicleName,
+        description: vehicle.Description,
+        seats: vehicle.NoOfSeats,
+        price: vehicle.Price,
+        currency: vehicle.Currency,
+        fareId: vehicle.FareId
+      };
+      // Update pricing
+      state.pricing.baseFare = parseFloat(vehicle.Price);
+      state.pricing.currency = vehicle.Currency;
+      state.pricing.serviceFee = Math.round(state.pricing.baseFare * 0.1 * 100) / 100; // 10% service fee
+      state.pricing.total = state.pricing.baseFare + state.pricing.serviceFee;
     },
-    setBookingDetails: (state, action) => {
-      state.bookingDetails = { ...state.bookingDetails, ...action.payload };
-    },
-    setQuote: (state, action) => {
-      state.quote = { ...state.quote, ...action.payload };
-    },
-    setUserDetails: (state, action) => {
+    updateUserDetails: (state, action) => {
       state.userDetails = { ...state.userDetails, ...action.payload };
     },
-    setPaymentStatus: (state, action) => {
+    updatePaymentStatus: (state, action) => {
       state.paymentStatus = action.payload;
     },
-    setBookingReference: (state, action) => {
-      state.bookingReference = action.payload;
-    },
-    setBookingStatus: (state, action) => {
+    updateBookingStatus: (state, action) => {
       state.bookingStatus = action.payload;
     },
-    generateBookingReference: (state) => {
-      state.bookingReference = Math.floor(100000 + Math.random() * 900000).toString();
-    },
-    resetBookingState: (state) => {
+    clearBooking: (state) => {
       return initialState;
-    },
-  },
+    }
+  }
 });
 
-export const {
-  setServiceType,
-  setBookingDetails,
-  setQuote,
-  setUserDetails,
-  setPaymentStatus,
-  setBookingReference,
-  setBookingStatus,
-  generateBookingReference,
-  resetBookingState,
+export const { 
+  selectVehicle, 
+  updateUserDetails, 
+  updatePaymentStatus, 
+  updateBookingStatus, 
+  clearBooking 
 } = bookingSlice.actions;
-
 export default bookingSlice.reducer;

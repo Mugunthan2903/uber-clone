@@ -2,9 +2,10 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   currentScreen: 'splash',
-  isLoading: false,
   showServiceFeeModal: false,
+  isLoading: false,
   error: null,
+  quoteExpiryTimer: 0
 };
 
 const uiSlice = createSlice({
@@ -14,11 +15,14 @@ const uiSlice = createSlice({
     setCurrentScreen: (state, action) => {
       state.currentScreen = action.payload;
     },
-    setIsLoading: (state, action) => {
-      state.isLoading = action.payload;
+    toggleServiceFeeModal: (state) => {
+      state.showServiceFeeModal = !state.showServiceFeeModal;
     },
-    setShowServiceFeeModal: (state, action) => {
+    setServiceFeeModal: (state, action) => {
       state.showServiceFeeModal = action.payload;
+    },
+    setLoading: (state, action) => {
+      state.isLoading = action.payload;
     },
     setError: (state, action) => {
       state.error = action.payload;
@@ -26,19 +30,25 @@ const uiSlice = createSlice({
     clearError: (state) => {
       state.error = null;
     },
-    resetUiState: (state) => {
-      return initialState;
+    setQuoteExpiryTimer: (state, action) => {
+      state.quoteExpiryTimer = action.payload;
     },
-  },
+    decrementQuoteTimer: (state) => {
+      if (state.quoteExpiryTimer > 0) {
+        state.quoteExpiryTimer -= 1;
+      }
+    }
+  }
 });
 
-export const {
-  setCurrentScreen,
-  setIsLoading,
-  setShowServiceFeeModal,
-  setError,
-  clearError,
-  resetUiState,
+export const { 
+  setCurrentScreen, 
+  toggleServiceFeeModal, 
+  setServiceFeeModal, 
+  setLoading, 
+  setError, 
+  clearError, 
+  setQuoteExpiryTimer, 
+  decrementQuoteTimer 
 } = uiSlice.actions;
-
 export default uiSlice.reducer;

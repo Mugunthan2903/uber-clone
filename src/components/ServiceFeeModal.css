@@ -1,0 +1,42 @@
+/* ServiceFeeModal Styles */
+.service-fee-modal {
+  max-width: 320px;
+  padding: var(--spacing-md);
+  text-align: center;
+}
+
+.modal-title {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-bold);
+  color: var(--primary-black);
+  margin-bottom: var(--spacing-sm);
+}
+
+.modal-text {
+  margin-bottom: var(--spacing-md);
+}
+
+.modal-text p {
+  font-size: var(--font-size-secondary);
+  color: var(--text-gray);
+  line-height: 1.4;
+  text-align: left;
+  margin: 0;
+}
+
+.modal-close-btn {
+  width: 100%;
+  background-color: var(--primary-blue);
+  color: var(--primary-white);
+  border: none;
+  padding: var(--spacing-sm);
+  border-radius: var(--border-radius-button);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-semi-bold);
+  cursor: pointer;
+  transition: var(--transition-default);
+}
+
+.modal-close-btn:hover {
+  background-color: #1565c0;
+}

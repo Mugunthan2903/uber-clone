@@ -1,0 +1,354 @@
+/* BookingReviewScreen Styles */
+.booking-review-screen {
+  background-color: var(--primary-white);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Header */
+.booking-review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-sm);
+  background-color: var(--primary-black);
+  border-bottom: 1px solid var(--border-gray);
+}
+
+.language-selector {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 20px;
+  font-size: var(--font-size-secondary);
+}
+
+.flag-icon {
+  width: 16px;
+  height: 12px;
+  border-radius: 2px;
+}
+
+.start-again-btn {
+  background-color: var(--primary-black);
+  color: var(--primary-white);
+  border: none;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 20px;
+  font-size: var(--font-size-secondary);
+  cursor: pointer;
+}
+
+.we-know-logo img {
+  height: 20px;
+}
+
+/* Main Content */
+.booking-review-main {
+  flex: 1;
+  padding: var(--spacing-sm);
+  overflow-y: auto;
+}
+
+.page-title {
+  font-size: var(--font-size-screen-title);
+  font-weight: var(--font-weight-semi-bold);
+  color: var(--primary-black);
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Booking Info Card */
+.booking-info-card {
+  background-color: #f8f8f8;
+  border-radius: var(--border-radius-card);
+  padding: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+}
+
+.vehicle-header {
+  margin-bottom: var(--spacing-sm);
+}
+
+.vehicle-summary {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.vehicle-icon-small {
+  width: 24px;
+  height: 24px;
+}
+
+.vehicle-name {
+  font-weight: var(--font-weight-semi-bold);
+  color: var(--primary-black);
+}
+
+.capacity-info {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: var(--font-size-secondary);
+  color: var(--text-gray);
+  margin-left: auto;
+}
+
+/* Route Info */
+.route-info {
+  margin-bottom: var(--spacing-sm);
+}
+
+.route-stop {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-xs);
+}
+
+.stop-indicator {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.pickup-dot {
+  background-color: var(--primary-black);
+  border-radius: var(--border-radius-circle);
+}
+
+.destination-square {
+  background-color: var(--primary-black);
+  border-radius: 2px;
+}
+
+.stop-details {
+  flex: 1;
+}
+
+.stop-name {
+  font-weight: var(--font-weight-semi-bold);
+  color: var(--primary-black);
+  font-size: var(--font-size-body);
+}
+
+.stop-address {
+  font-size: var(--font-size-secondary);
+  color: var(--text-gray);
+}
+
+.route-connector {
+  width: 2px;
+  height: 20px;
+  background-color: var(--border-gray);
+  margin: 0 0 0 calc(var(--spacing-sm) + 5px);
+  margin-bottom: var(--spacing-xs);
+}
+
+/* Map Preview */
+.map-preview {
+  position: relative;
+  border-radius: var(--border-radius-card);
+  overflow: hidden;
+}
+
+.route-map {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.quote-timer {
+  /* position: absolute; */
+  bottom: var(--spacing-xs);
+  right: var(--spacing-xs);
+  background-color: var(--primary-blue);
+  color: var(--primary-white);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 12px;
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-semi-bold);
+}
+
+/* Pricing Section */
+.pricing-section {
+  margin-bottom: var(--spacing-sm);
+}
+
+.pricing-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-xs) 0;
+}
+
+.service-fee-row {
+  cursor: pointer;
+}
+
+.service-fee-row:hover {
+  background-color: #f5f5f5;
+  margin: 0 calc(-1 * var(--spacing-xs));
+  padding-left: var(--spacing-xs);
+  padding-right: var(--spacing-xs);
+  border-radius: var(--border-radius-button);
+}
+
+.pricing-label {
+  font-size: var(--font-size-body);
+  color: var(--primary-black);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.info-icon {
+  background-color: var(--primary-blue);
+  color: var(--primary-white);
+  width: 16px;
+  height: 16px;
+  border-radius: var(--border-radius-circle);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+}
+
+.pricing-value {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-semi-bold);
+  color: var(--primary-black);
+}
+
+.pricing-divider {
+  height: 1px;
+  background-color: var(--border-gray);
+  margin: var(--spacing-xs) 0;
+}
+
+.total-row {
+  font-weight: var(--font-weight-bold);
+}
+
+.total-label {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-bold);
+}
+
+.total-value {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-bold);
+}
+
+.vat-notice {
+  font-size: var(--font-size-small);
+  color: var(--text-gray);
+  text-align: right;
+  margin-top: var(--spacing-xs);
+}
+
+/* Terms Section */
+.terms-section {
+  margin-bottom: var(--spacing-sm);
+}
+
+.terms-toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  background: none;
+  border: none;
+  padding: var(--spacing-xs) 0;
+  cursor: pointer;
+  font-size: var(--font-size-body);
+  color: var(--primary-black);
+}
+
+.plus-icon {
+  font-size: 18px;
+  font-weight: var(--font-weight-bold);
+}
+
+.terms-content {
+  padding: var(--spacing-sm);
+  background-color: #f8f8f8;
+  border-radius: var(--border-radius-card);
+  margin-top: var(--spacing-xs);
+}
+
+.terms-content p {
+  font-size: var(--font-size-secondary);
+  color: var(--text-gray);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.privacy-notice {
+  margin-bottom: var(--spacing-sm);
+}
+
+.privacy-notice p {
+  font-size: var(--font-size-small);
+  color: var(--text-gray);
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Footer */
+.booking-review-footer {
+  background-color: var(--primary-white);
+  padding: var(--spacing-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--border-gray);
+}
+
+.bolt-branding {
+  flex: 1;
+  text-align: center;
+}
+
+.bolt-text {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-bold);
+  color: var(--primary-black);
+}
+
+.footer-buttons {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.back-btn, .pay-btn {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius-button);
+  font-weight: var(--font-weight-semi-bold);
+  cursor: pointer;
+  transition: var(--transition-default);
+}
+
+.back-btn {
+  background-color: transparent;
+  color: var(--primary-black);
+  border: 1px solid var(--border-gray);
+}
+
+.back-btn:hover {
+  background-color: #f5f5f5;
+}
+
+.pay-btn {
+  background-color: var(--primary-blue);
+  color: var(--primary-white);
+  border: none;
+}
+
+.pay-btn:hover {
+  background-color: #1565c0;
+}

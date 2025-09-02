@@ -1,0 +1,307 @@
+/* AvailabilityScreen Styles */
+.availability-screen {
+  background-color: var(--primary-white);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Header */
+.availability-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-sm);
+  background-color: var(--primary-black);
+  border-bottom: 1px solid var(--border-gray);
+}
+
+.language-selector {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 20px;
+  font-size: var(--font-size-secondary);
+}
+
+.flag-icon {
+  width: 16px;
+  height: 12px;
+  border-radius: 2px;
+}
+
+.start-again-btn {
+  background-color: var(--primary-black);
+  color: var(--primary-white);
+  border: none;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 20px;
+  font-size: var(--font-size-secondary);
+  cursor: pointer;
+}
+
+.we-know-logo img {
+  height: 20px;
+}
+
+/* Main Content */
+.availability-main {
+  flex: 1;
+  padding: var(--spacing-sm);
+  overflow-y: auto;
+}
+
+.section-title {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-semi-bold);
+  color: var(--primary-black);
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Quote Section */
+.quote-section {
+  margin-bottom: var(--spacing-md);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-sm);
+}
+
+.quote-timer {
+  background-color: var(--primary-blue);
+  color: var(--primary-white);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 12px;
+  font-size: var(--font-size-secondary);
+  font-weight: var(--font-weight-semi-bold);
+}
+
+.vehicles-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.vehicle-card {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-sm);
+  border: 2px solid transparent;
+  border-radius: var(--border-radius-card);
+  background-color: #f8f8f8;
+  cursor: pointer;
+  transition: var(--transition-default);
+}
+
+.vehicle-card:hover {
+  border-color: var(--primary-blue);
+}
+
+.vehicle-card.selected {
+  border-color: var(--primary-blue);
+  background-color: #e3f2fd;
+}
+
+.vehicle-icon {
+  width: 48px;
+  height: 48px;
+  margin-right: var(--spacing-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-white);
+  border-radius: var(--border-radius-card);
+}
+
+.vehicle-icon img {
+  width: 32px;
+  height: 32px;
+}
+
+.vehicle-info {
+  flex: 1;
+}
+
+.vehicle-name {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-semi-bold);
+  margin: 0 0 2px 0;
+  color: var(--primary-black);
+}
+
+.vehicle-description {
+  font-size: var(--font-size-secondary);
+  color: var(--text-gray);
+  margin: 0 0 var(--spacing-xs) 0;
+}
+
+.vehicle-capacity {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: var(--font-size-secondary);
+  color: var(--text-gray);
+}
+
+.vehicle-price {
+  text-align: right;
+}
+
+.price {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-bold);
+  color: var(--primary-black);
+}
+
+.price-label {
+  font-size: var(--font-size-small);
+  color: var(--text-gray);
+}
+
+/* Details Section */
+.details-section {
+  margin-bottom: var(--spacing-md);
+}
+
+.form-group {
+  margin-bottom: var(--spacing-sm);
+}
+
+.form-label {
+  display: block;
+  font-size: var(--font-size-secondary);
+  font-weight: var(--font-weight-semi-bold);
+  color: var(--primary-black);
+  margin-bottom: var(--spacing-xs);
+}
+
+.phone-input {
+  display: flex;
+  background-color: #f5f5f5;
+  border-radius: var(--border-radius-card);
+  padding: var(--spacing-sm);
+  gap: var(--spacing-sm);
+}
+
+.country-selector {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.country-flag {
+  width: 16px;
+  height: 12px;
+  border-radius: 2px;
+}
+
+.country-code {
+  background: transparent;
+  border: none;
+  font-size: var(--font-size-body);
+  outline: none;
+}
+
+.phone-number {
+  flex: 1;
+  background: transparent;
+  border: none;
+  font-size: var(--font-size-body);
+  outline: none;
+}
+
+.phone-number::placeholder {
+  color: var(--text-gray);
+}
+
+.form-help {
+  font-size: var(--font-size-small);
+  color: var(--text-gray);
+  margin-top: var(--spacing-xs);
+  line-height: 1.4;
+}
+
+.email-input {
+  width: 100%;
+  background-color: #f5f5f5;
+  border: none;
+  border-radius: var(--border-radius-card);
+  padding: var(--spacing-sm);
+  font-size: var(--font-size-body);
+  outline: none;
+}
+
+.email-input::placeholder {
+  color: var(--text-gray);
+}
+
+.email-input:focus, .phone-input:focus-within {
+  box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.2);
+}
+
+/* Footer */
+.availability-footer {
+  background-color: var(--primary-white);
+  padding: var(--spacing-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--border-gray);
+}
+
+.bolt-branding {
+  flex: 1;
+  text-align: center;
+}
+
+.bolt-text {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-bold);
+  color: var(--primary-black);
+}
+
+.footer-buttons {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.back-btn, .review-btn {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius-button);
+  font-weight: var(--font-weight-semi-bold);
+  cursor: pointer;
+  transition: var(--transition-default);
+}
+
+.back-btn {
+  background-color: transparent;
+  color: var(--primary-black);
+  border: 1px solid var(--border-gray);
+}
+
+.back-btn:hover {
+  background-color: #f5f5f5;
+}
+
+.review-btn.enabled {
+  background-color: var(--primary-blue);
+  color: var(--primary-white);
+  border: none;
+}
+
+.review-btn.enabled:hover {
+  background-color: #1565c0;
+}
+
+.review-btn.disabled {
+  background-color: var(--border-gray);
+  color: var(--text-gray);
+  border: none;
+  cursor: not-allowed;
+}

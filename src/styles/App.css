@@ -1,0 +1,50 @@
+/* Main App Styles */
+.app {
+  height: 100vh;
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  background-color: var(--primary-white);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Screen-specific styles */
+.splash-screen {
+  background-color: var(--primary-black);
+  color: var(--primary-white);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+}
+
+.search-screen,
+.availability-screen,
+.booking-review-screen {
+  background-color: var(--primary-white);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-loading-screen,
+.payment-loading-screen,
+.booking-loading-screen,
+.print-loading-screen {
+  background: var(--gradient-blue);
+  color: var(--primary-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.confirmation-screen {
+  background-color: var(--primary-white);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-sm);
+}

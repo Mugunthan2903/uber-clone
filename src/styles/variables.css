@@ -1,0 +1,41 @@
+/* Design System Variables */
+:root {
+  /* Colors */
+  --primary-black: #000000;
+  --primary-white: #ffffff;
+  --primary-blue: #1976d2;
+  --text-gray: #666666;
+  --border-gray: #e0e0e0;
+  --gradient-blue: linear-gradient(135deg, #42a5f5 0%, #1976d2 100%);
+  
+  /* Typography */
+  --font-family: 'CircularProTT', 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-size-title: 32px;
+  --font-size-screen-title: 24px;
+  --font-size-body: 16px;
+  --font-size-secondary: 14px;
+  --font-size-small: 12px;
+  --font-weight-bold: bold;
+  --font-weight-semi-bold: 600;
+  --font-weight-normal: 400;
+  
+  /* Layout */
+  --container-width: 400px;
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 32px;
+  --spacing-xl: 48px;
+  
+  /* Border Radius */
+  --border-radius-card: 8px;
+  --border-radius-button: 4px;
+  --border-radius-circle: 50%;
+  
+  /* Shadows */
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-elevated: 0 4px 16px rgba(0, 0, 0, 0.15);
+  
+  /* Transitions */
+  --transition-default: all 0.3s ease;
+}

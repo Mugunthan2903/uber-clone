@@ -1,0 +1,38 @@
+/* PaymentLoadingScreen Styles */
+.payment-loading-screen {
+  background: var(--gradient-blue);
+  color: var(--primary-white);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.payment-loading-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xl);
+}
+
+.payment-message {
+  font-size: var(--font-size-screen-title);
+  font-weight: var(--font-weight-semi-bold);
+  line-height: 1.3;
+  margin: 0;
+}
+
+.payment-amount {
+  font-size: var(--font-size-title);
+  font-weight: var(--font-weight-bold);
+}
+
+.payment-arrow {
+  margin-top: var(--spacing-lg);
+}
+
+.payment-arrow img {
+  width: 32px;
+  height: 32px;
+}

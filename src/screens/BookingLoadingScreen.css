@@ -1,0 +1,24 @@
+/* BookingLoadingScreen Styles */
+.booking-loading-screen {
+  background: var(--gradient-blue);
+  color: var(--primary-white);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.booking-loading-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xl);
+}
+
+.booking-message {
+  font-size: var(--font-size-screen-title);
+  font-weight: var(--font-weight-semi-bold);
+  line-height: 1.3;
+  margin: 0;
+}
